@@ -1039,3 +1039,7 @@ pre {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+.about-text p {
+    text-align: center !important;
+}
