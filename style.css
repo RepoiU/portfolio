@@ -1043,3 +1043,11 @@ pre {
 .about-text p {
     text-align: center !important;
 }
+
+/* Force center text in about section */
+.about-text,
+.about-text p,
+.section.about .about-text,
+.section.about .about-text p {
+    text-align: center !important;
+}
