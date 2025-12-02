@@ -276,3 +276,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Typing Effect
+const codeText = `const developer = {
+  name: 'João Pedro',
+  role: 'Full Stack Dev',
+  skills: [
+    'React', 'Node.js',
+    'Python', 'AI/ML'
+  ],
+  hardWorker: true,
+  quickLearner: true
+};
+
+developer.buildFuture();`;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const element = document.getElementById('typewriter-code');
+    if (element) {
+        // Clear initial content just in case
+        element.innerHTML = '';
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startTyping();
+                    observer.disconnect();
+                }
+            });
+        });
+
+        function startTyping() {
+            let i = 0;
+            element.innerHTML = '<span class="cursor-blink"></span>';
+
+            function type() {
+                if (i < codeText.length) {
+                    // Insert text before the cursor
+                    const currentText = codeText.substring(0, i + 1);
+                    element.innerHTML = currentText + '<span class="cursor-blink"></span>';
+                    // Simple syntax highlighting could be added here if needed
+                    i++;
+                    setTimeout(type, 30);
+                }
+            }
+            type();
+        }
+
+        observer.observe(element);
+    }
+});
