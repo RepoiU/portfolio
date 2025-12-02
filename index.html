@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de João Pedro - Desenvolvedor Full Stack & Tecnólogo Criativo">
+    <title>João Pedro | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating Background Animations -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">JP<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <span class="greeting">Olá, eu sou</span>
+                    <h1 class="glitch" data-text="João Pedro">João Pedro</h1>
+                    <h2 class="subtitle">Desenvolvedor Full Stack & <span class="gradient-text">Tecnólogo
+                            Criativo</span></h2>
+                    <p class="bio">
+                        Desenvolvedor apaixonado por criar experiências web imersivas e sistemas inteligentes.
+                        Especialista em tecnologias web modernas e soluções de trading algorítmico.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contact" class="btn btn-outline">Fale Comigo</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/RepoiU" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/joao-pedro27/" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:joaozpedro.1337@gmail.com" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in-up delay-200">
+                    <div class="code-block-wrapper">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <pre><code class="language-javascript">
+const developer = {
+  name: 'João Pedro',
+  role: 'Full Stack Dev',
+  skills: [
+    'React', 'Node.js',
+    'Python', 'AI/ML'
+  ],
+  hardWorker: true,
+  quickLearner: true
+};
+
+developer.buildFuture();
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Sobre <span class="gradient-text">Mim</span></h2>
+                <div class="about-content">
+                    <div class="about-text fade-in-up">
+                        <p>
+                            Sou um desenvolvedor focado em transformar ideias complexas em soluções digitais elegantes e
+                            funcionais.
+                            Com uma forte base em desenvolvimento Full Stack e um interesse crescente em Inteligência
+                            Artificial aplicada ao mercado financeiro,
+                            busco sempre a excelência técnica e visual em meus projetos.
+                        </p>
+                        <p>
+                            Quando não estou codando, estou explorando novas tecnologias, estudando padrões de mercado
+                            ou aprimorando meus algoritmos de trading.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Minhas <span class="gradient-text">Habilidades</span></h2>
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <div class="skill-card fade-in-up">
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
+                        <h3>Frontend</h3>
+                        <p>React, Vue.js, Next.js, Tailwind CSS, Three.js</p>
+                    </div>
+                    <!-- Backend -->
+                    <div class="skill-card fade-in-up delay-100">
+                        <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                        <h3>Backend</h3>
+                        <p>Node.js, Python, Express, Firebase, Supabase</p>
+                    </div>
+                    <!-- Data & AI -->
+                    <div class="skill-card fade-in-up delay-200">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Data & AI</h3>
+                        <p>TensorFlow, Pandas, Algorithmic Trading, Data Viz</p>
+                    </div>
+                    <!-- Tools -->
+                    <div class="skill-card fade-in-up delay-300">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Ferramentas</h3>
+                        <p>Git, Docker, Figma, VS Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Projetos <span class="gradient-text">Selecionados</span></h2>
+                <div class="projects-grid">
+
+                    <!-- Project 1: Luxe | Moda Premium -->
+                    <article class="project-card fade-in-up" data-project="nexusmarket">
+                        <div class="project-image">
+                            <img src="assets/luxe_hero_home.png" alt="Luxe | Moda Premium"
+                                onerror="this.src='https://placehold.co/600x400/1a1a1a/FFF?text=Luxe'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="icon-btn" title="Ver Código"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="icon-btn" title="Ver Demo"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Luxe | Moda Premium</h3>
+                            <p class="project-desc">E-commerce de moda premium com experiência de compra sofisticada.
+                            </p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Stripe</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Vanguard CRM -->
+                    <article class="project-card fade-in-up delay-100" data-project="vanguardcrm">
+                        <div class="project-image">
+                            <img src="assets/vanguard_crm_dashboard.png" alt="Vanguard CRM"
+                                onerror="this.src='https://placehold.co/600x400/1a1a1a/FFF?text=Vanguard+CRM'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="icon-btn" title="Ver Código"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="icon-btn" title="Ver Demo"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Dashboard</h3>
+                            <p class="project-desc">Painel de controle moderno com visualização de dados em tempo real.
+                            </p>
+                            <div class="project-tags">
+                                <span>Vue.js</span>
+                                <span>Firebase</span>
+                                <span>Chart.js</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: QuantAI -->
+                    <article class="project-card fade-in-up delay-200" data-project="quantai">
+                        <div class="project-image">
+                            <img src="assets/quantai_trading_bot.png" alt="QuantAI Trading Bot"
+                                onerror="this.src='https://placehold.co/600x400/1a1a1a/FFF?text=QuantAI'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="icon-btn" title="Ver Código"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="icon-btn" title="Ver Demo"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>AI Trading System</h3>
+                            <p class="project-desc">Sistema de trading algorítmico com inteligência artificial.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>Binance API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Helios -->
+                    <article class="project-card fade-in-up delay-300" data-project="helios">
+                        <div class="project-image">
+                            <img src="assets/helios_solar_system.png" alt="Helios Solar System"
+                                onerror="this.src='https://placehold.co/600x400/1a1a1a/FFF?text=Helios'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="icon-btn" title="Ver Código"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="icon-btn" title="Ver Demo"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Proposta Solar</h3>
+                            <p class="project-desc">Gerador de propostas comerciais para sistemas de energia solar.</p>
+                            <div class="project-tags">
+                                <span>Three.js</span>
+                                <span>WebGL</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Vamos <span class="gradient-text">Conversar?</span></h2>
+                <div class="contact-wrapper fade-in-up">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Seu Nome</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Seu Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required placeholder=" " rows="5"></textarea>
+                            <label for="message">Sua Mensagem</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Project Details Sidebar -->
+        <aside class="project-sidebar" id="projectSidebar">
+            <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+            <div class="sidebar-content">
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="sidebar-inner">
+                    <div class="sidebar-header">
+                        <h2 id="sidebarTitle">Project Title</h2>
+                        <p id="sidebarTagline">Project tagline</p>
+                    </div>
+
+                    <div class="sidebar-gallery">
+                        <div class="main-image">
+                            <img id="sidebarMainImage" src="" alt="Project main image">
+                        </div>
+                        <div class="gallery-thumbs" id="galleryThumbs">
+                            <!-- Thumbnails will be inserted here -->
+                        </div>
+                    </div>
+
+                    <div class="sidebar-description">
+                        <h3>Sobre o Projeto</h3>
+                        <p id="sidebarDescription"></p>
+                    </div>
+
+                    <div class="sidebar-tech">
+                        <h3>Tecnologias</h3>
+                        <div class="tech-list" id="sidebarTechList">
+                            <!-- Tech tags will be inserted here -->
+                        </div>
+                    </div>
+
+                    <div class="sidebar-actions">
+                        <a href="#" class="btn btn-primary" id="sidebarDemo">
+                            <i class="fas fa-external-link-alt"></i> Ver Demo
+                        </a>
+                        <a href="#" class="btn btn-outline" id="sidebarGithub">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 João Pedro. Todos os direitos reservados.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/RepoiU" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joao-pedro27/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
