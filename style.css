@@ -189,9 +189,8 @@ h6 {
     text-align: center;
     margin-bottom: 4rem;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    width: 100%;
 }
 
 .section-title::after {
@@ -1067,3 +1066,4 @@ pre {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
