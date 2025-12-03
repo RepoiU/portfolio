@@ -253,6 +253,15 @@ document.addEventListener('DOMContentLoaded', () => {
             images: ['assets/helios_solar_system.png'],
             demo: '#',
             github: '#'
+        },
+        chatbot: {
+            title: 'Chatbot WhatsApp API',
+            tagline: 'Automação e Inteligência Conversacional',
+            description: 'Bot desenvolvido para integração via API oficial e WhatsApp Web. Capaz de automatizar atendimentos, gerenciar fluxos de conversa complexos e integrar com sistemas externos. Ideal para suporte ao cliente e automação de vendas.',
+            technologies: ['Node.js', 'WhatsApp API', 'WebSockets', 'AI Integration'],
+            images: ['assets/chatbot_whatsapp_api.png'],
+            demo: '#',
+            github: '#'
         }
     };
 
