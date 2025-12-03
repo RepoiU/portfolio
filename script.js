@@ -5,12 +5,29 @@ class ParticleSystem {
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
         this.particleCount = 80;
+        this.mouse = {
+            x: null,
+            y: null,
+            radius: 150 // Raio de influência do mouse
+        };
 
         this.resize();
         this.init();
         this.animate();
 
         window.addEventListener('resize', () => this.resize());
+
+        // Rastrear movimento do mouse
+        window.addEventListener('mousemove', (e) => {
+            this.mouse.x = e.clientX;
+            this.mouse.y = e.clientY;
+        });
+
+        // Resetar posição do mouse quando sair da página
+        window.addEventListener('mouseout', () => {
+            this.mouse.x = null;
+            this.mouse.y = null;
+        });
     }
 
     resize() {
@@ -24,6 +41,8 @@ class ParticleSystem {
                 x: Math.random() * this.canvas.width,
                 y: Math.random() * this.canvas.height,
                 size: Math.random() * 3 + 1,
+                baseSpeedX: (Math.random() - 0.5) * 0.5,
+                baseSpeedY: (Math.random() - 0.5) * 0.5,
                 speedX: (Math.random() - 0.5) * 0.5,
                 speedY: (Math.random() - 0.5) * 0.5,
                 opacity: Math.random() * 0.5 + 0.2
@@ -35,6 +54,40 @@ class ParticleSystem {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
         this.particles.forEach((particle, index) => {
+            // Interação com o mouse
+            if (this.mouse.x !== null && this.mouse.y !== null) {
+                const dx = particle.x - this.mouse.x;
+                const dy = particle.y - this.mouse.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                // Se a partícula estiver dentro do raio do mouse
+                if (distance < this.mouse.radius) {
+                    const force = (this.mouse.radius - distance) / this.mouse.radius;
+                    const angle = Math.atan2(dy, dx);
+
+                    // Empurrar partícula para longe do mouse
+                    particle.speedX = particle.baseSpeedX + Math.cos(angle) * force * 3;
+                    particle.speedY = particle.baseSpeedY + Math.sin(angle) * force * 3;
+
+                    // Desenhar linha entre mouse e partícula
+                    const lineOpacity = (1 - distance / this.mouse.radius) * 0.4;
+                    this.ctx.strokeStyle = `rgba(59, 130, 246, ${lineOpacity})`;
+                    this.ctx.lineWidth = 1.5;
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.mouse.x, this.mouse.y);
+                    this.ctx.lineTo(particle.x, particle.y);
+                    this.ctx.stroke();
+                } else {
+                    // Retornar gradualmente à velocidade base
+                    particle.speedX += (particle.baseSpeedX - particle.speedX) * 0.05;
+                    particle.speedY += (particle.baseSpeedY - particle.speedY) * 0.05;
+                }
+            } else {
+                // Retornar à velocidade base quando mouse não está presente
+                particle.speedX += (particle.baseSpeedX - particle.speedX) * 0.05;
+                particle.speedY += (particle.baseSpeedY - particle.speedY) * 0.05;
+            }
+
             // Update position
             particle.x += particle.speedX;
             particle.y += particle.speedY;
